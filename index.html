@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- manifest="manifest.appcache"> -->
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" sizes="192x192" href="images/logo-app.png">
+    <link rel="apple-touch-icon" href="images/logo-app.png">
+
+
+    <title>Bodragon Radar</title>
+
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+
+
+<body>
+
+
+
+  <header>
+    <h1>Bodragon Radar</h1>
+  </header>
+
+
+
+  <div class="container">
+
+    <div class="compass">
+
+      <div id="rose" class="compass__rose">
+
+        <svg class="compass__rose__dial" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <circle  id="ball1" cx="65" cy="65" r="2" stroke="darkorange" stroke-width="0.5" fill="orange">
+            <animate attributeName="fill" from="gold" to="orange" dur="2.5s" repeatCount="indefinite" begin="0.5s" />
+          </circle>
+          <circle cx="65" cy="65" r="56" stroke="lightgreen" stroke-width="1" fill="none" stroke-opacity="0.4">
+             <animate attributeName="r" from="0" to="65" dur="2.5s" repeatCount="indefinite" begin="0.5s" />
+           </circle>
+          <polyline points="63,9  67,9  65,13" fill="white"/>
+          <polyline points="121,63  121,67  119,65" fill="white"/>
+          <polyline points="63,121  67,121  65,119" fill="white"/>
+          <polyline points="9,63  9,67  11,65" fill="white"/>
+
+          <text x="65" y="4.2" font-size="5" text-anchor="middle" fill="white">N</text>
+          <text x="127" y="67" font-size="5" text-anchor="middle" fill="white">E</text>
+          <text x="65" y="129" font-size="5" text-anchor="middle" fill="white">S</text>
+          <text x="2.8" y="67" font-size="5" text-anchor="middle" fill="white">W</text>
+
+        </svg>
+
+      </div>
+
+      <svg class="compass__pointer" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- polyline primera componente x, segunda y -->
+        <circle  id="ball2" cx="63" cy="70" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <circle  id="ball3" cx="67" cy="70" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <circle  id="ball4" cx="65" cy="69" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <circle  id="ball5" cx="67" cy="72" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <circle  id="ball6" cx="63" cy="72" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <circle  id="ball7" cx="65" cy="73" r="2" stroke="darkorange" stroke-width="0.5" fill="orange" />
+        <polyline points="60,70  70,70  65,60" fill="red"/>
+
+      </svg>
+
+    </div>
+
+  </div>
+
+
+  <div class='status'>
+
+    <div id='debug-orientation-default'></div>
+    <div id='debug-orientation'></div>
+
+    <div class='position row'>
+      <div class='column-33'>
+        <div class='label'>HDG</div>
+        <div id='position-hng'>n/a</div>
+      </div
+      ><div class='column-33'>
+        <div class='label'>Lat</div>
+        <div id='position-lat'>&#8943;</div>
+      </div
+      ><div class='column-33'>
+        <div class='label'>Lng</div>
+        <div id='position-lng'>&#8943;</div>
+      </div>
+    </div>
+
+    <div class='position row'>
+      <div class='column-33'>
+        <div class='label'>Accuracy</div>
+        <div id='position-latraw'>&#8943;</div>
+      </div
+      ><div class='column-33'>
+        <div class='label'>Speed</div>
+        <div id='position-lngraw'>&#8943;</div>
+      </div>
+
+      <button id="btn-nightmode" class="btn options__btn column-33" type="button">
+
+      </button>
+      <div class='column-33'>
+      <button id="btn-lock-orientation" class="btn btn--hide options__btn column-25" type="button">
+      </button>
+    </div>
+    </div>
+
+  </div>
+
+
+  <div id="popup" class="popup">
+
+    <div id="popup-content" class="popup__content">
+
+      <div id="popup-contents" class="popup__contents">
+        <div id="popup-inner-info" class="popup__inner popup__inner--hide">
+          <p>
+          For best results calibrate the accelerometer in your device by tracing out a figure of 8 in the air several times vertically and horizontally. The heading can also be affected by nearby magnetic fields.
+          </p>
+          <p>
+          For more information, bugs or comments please visit <a href='https://github.com/lamplightdev/compass'>the repo on github</a>.
+          </p>
+        </div>
+
+        <div id="popup-inner-noorientation" class="popup__inner popup__inner--hide">
+          <p>
+            Unfortunately this browser doesn't support orientation so will not show your correct heading.
+          </p>
+        </div>
+      </div>
+
+      <button id="popup-close" class="popup__close" href='#'>close</button>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+
+
+</html>

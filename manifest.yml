@@ -1,0 +1,6 @@
+
+---
+applications:
+ - name: palaboda
+   random-route: true
+   memory: 256M
