@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- manifest="manifest.appcache"> -->
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" sizes="192x192" href="images/logo-app.png">
+    <link rel="apple-touch-icon" href="images/logo-app.png">
+
+
+    <title>Bodragon Radar</title>
+
+    <link rel="stylesheet" href="css/app0.css">
+
+</head>
+
+
+
+<body>
+
+
+
+  <header>
+    <IMG width=100% height=90% SRC="fondoespacio.png">
+  </header>
+
+
+
+  <div class="container">
+
+    <div class="compass">
+
+      <svg class="compass__pointer" viewBox="0 0 130 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- polyline primera componente x, segunda y -->
+        <text id="pulsaintro" fill="black" x="65" y="70" font-size="10" text-anchor="middle" fill="white" >
+          PULSAD LA PANTALLA
+        <animate attributeName="fill" from="white" to="black" dur="2.5s" repeatCount="indefinite" begin="0.5s" />
+      </text>
+          <text id='s1' x="65" y="100" font-size="9" text-anchor="middle" fill="white" textLength="300" lengthAdjust="spacingAndGlyphs">Bienvenidos a vuestra primera aventura como Esposo y Marida.
+          </text>
+          <text id='s2' x="65" y="110" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Nos hubiese gustado haceros un regalo grupal, pero ha sido imposible ponernos de acuerdo, por lo que hemos decidido daros algo mejor, un deseo.
+  </text>
+          <text id='s3' x="65" y="120" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Pero un deseo no se concede así como así. Se dice que si se logran reunir las 7 bolas de dragón y se dicen las palabras mágicas, SHENRON, el dios dragón, te concede un deseo sea cual sea.
+  </text>
+          <text id='s4' x="65" y="130" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Por suerte para vosotros hemos conseguido reunir 6 de ellas. Pero al no fiarnos unos de otros hemos preferido custodiar cada una de ellas.
+  </text>
+          <text id='s5' x="65" y="140" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Vuestra primera bola se encuentra cerca del propietario de la espada de Isildur, Narsil. El resto irán siendo anunciadas a lo largo de la noche,
+  </text>
+          <text id='s6' x="65" y="150" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Reunid las bolas y pedid vuestro deseo!!!!
+  </text>
+          <text id='s7' x="65" y="160" font-size="9" text-anchor="middle" fill="white" textLength="300"lengthAdjust="spacingAndGlyphs">Psd. Para encontrar la última bola será necesario utilizar una herramienta extra.<br> *Bulma está trabajando en ella.
+          </text>
+
+      </svg>
+
+    </div>
+
+  </div>
+
+
+  <div class='status'>
+
+
+    <div class='position row'>
+
+      <button id="btn-nightmode" class="btn options__btn column-33" type="button">
+
+      </button>
+      <div class='column-33'>
+      <button id="btn-lock-orientation" class="btn btn--hide options__btn column-25" type="button">
+      </button>
+    </div>
+    </div>
+
+  </div>
+
+
+  <div id="popup" class="popup">
+
+    <div id="popup-content" class="popup__content">
+
+      <div id="popup-contents" class="popup__contents">
+        <div id="popup-inner-info" class="popup__inner popup__inner--hide">
+          <p>
+          For best results calibrate the accelerometer in your device by tracing out a figure of 8 in the air several times vertically and horizontally. The heading can also be affected by nearby magnetic fields.
+          </p>
+          <p>
+          For more information, bugs or comments please visit <a href='https://github.com/lamplightdev/compass'>the repo on github</a>.
+          </p>
+        </div>
+
+        <div id="popup-inner-noorientation" class="popup__inner popup__inner--hide">
+          <p>
+            Unfortunately this browser doesn't support orientation so will not show your correct heading.
+          </p>
+        </div>
+      </div>
+
+      <button id="popup-close" class="popup__close" href='#'>close</button>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="app0.js"></script>
+
+</body>
+
+
+</html>

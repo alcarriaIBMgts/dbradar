@@ -62,16 +62,10 @@ app.post("/api/visitors", function (request, response) {
  * [ "Bob", "Jane" ]
  * @return An array of all the visitor names
 */
-app.get("/1", function (request, response) {
-data = 1;
-fs.writeFile("my-file.txt", "1", function(err) {
-    if(err) {
-        return console.log(err);
-    }
+app.get("/intro", function (req, res) {
 
-    console.log("The file was saved with 1!");
-});
-return 1;
+  res.sendFile(__dirname + '/intro.html')});
+
 });
 
 app.get("/2", function (req, res) {
