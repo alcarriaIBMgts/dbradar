@@ -51,6 +51,15 @@ html {
   }
 
 
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+
+
+
 
 header {
   padding: 0.5rem;
@@ -62,15 +71,6 @@ header {
 
   transition: -webkit-transform 0.5s ease-out 0s;
   transition: transform 0.5s ease-out 0s;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 130%;
-  background: #000;
-  overflow: hidden;
 }
 
 .fade {
@@ -119,11 +119,13 @@ body {
     top: 0;
     transform: rotateX(20deg)  translateZ(0);
   }
-  140% {
+  100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
+
+
 
 .container {
   padding: 5rem 1rem 8rem 1rem;
