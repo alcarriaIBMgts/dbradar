@@ -321,28 +321,9 @@
     }
   }
 
-  function locationUpdate(position) {
-    console.log(position);
-    positionCurrent.lat = position.coords.latitude;
-    positionCurrent.lng = position.coords.longitude;
-
-
-    //distance to ball
-
-    //latitud 90º es 10.000km mos o menos un cuadrante terrestre
-    //longitud 40.000 en 360º
-    //si lat1 - lat0 > 0 más arriba del origen
-    //si lon1 - lon0 > 0 más a la derecha del origen
 
 
 
-  }
-
-  function locationUpdateFail(error) {
-    positionLat.textContent = "n/a";
-    positionLng.textContent = "n/a";
-    console.log("location fail: ", error);
-  }
 
   function setNightmode(on) {
 
@@ -447,11 +428,7 @@
   //popup.addEventListener("click", popupClose);
   //popupContents.addEventListener("click", popupContentsClick);
 
-  navigator.geolocation.watchPosition(locationUpdate, locationUpdateFail, {
-    enableHighAccuracy: true,
-    maximumAge: 0,
-    timeout: 2700
-  });
+
 
   setNightmode(false);
   checkLockable();
