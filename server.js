@@ -62,7 +62,7 @@ app.post("/api/visitors", function (request, response) {
  * [ "Bob", "Jane" ]
  * @return An array of all the visitor names
 */
-app.get("/intro", function (request, response) {
+app.get("/intro", function (req, res) {
   res.sendFile(__dirname + '/intro.html')});
 
 
