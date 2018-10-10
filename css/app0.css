@@ -205,6 +205,12 @@ h1 sub
 	-o-transform: perspective(300px) rotateX(25deg);
 	transform: perspective(300px) rotateX(25deg);
 }
+@media screen and (min-width: 480px) {
+    .img {
+       height: auto;
+       max-width: 100%;
+     }
+}
 
 #titles:after
 {
@@ -278,7 +284,7 @@ h1 sub
 
 
 header {
-  padding: 0.5rem;
+  padding: 0;
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
