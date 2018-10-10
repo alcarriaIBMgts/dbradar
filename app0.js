@@ -355,7 +355,7 @@
   function playaudio() {
     intro.play();
     introtext.setAttribute("font-size", "0");
-    document.getElementById( 'sw' ).scrollIntoView();
+    document.getElementById( 'titles' ).scrollIntoView();
 
   }
   function popupOpenFromClick(event) {
