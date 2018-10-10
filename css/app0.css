@@ -191,7 +191,7 @@ h1 sub
 	bottom: 0;
 	left: 50%;
 	margin-left: -9em;
-	font-size: 350%;
+	font-size: 150%;
 	text-align: justify;
 	overflow: hidden;
 	-webkit-transform-origin: 50% 100%;
@@ -205,12 +205,7 @@ h1 sub
 	-o-transform: perspective(300px) rotateX(25deg);
 	transform: perspective(300px) rotateX(25deg);
 }
-@media screen and (min-width: 480px) {
-    .img {
-       height: auto;
-       max-width: 100%;
-     }
-}
+
 
 #titles:after
 {
