@@ -357,7 +357,7 @@
         console.log(balls[i]);
 //3pixeles equivalen a 1m
         if (balls[i].dist < 62 ) {
-          balls[i].px = 65 + balls[i].x*1000;
+          balls[i].px = 65 - balls[i].x*1000;
           balls[i].py = 65 + balls[i].y*1000;
           ball1.setAttribute("stroke", "darkorange");
           ball1.setAttribute("fill", "orange");
