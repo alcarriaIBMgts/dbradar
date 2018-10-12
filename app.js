@@ -340,7 +340,7 @@
 
     //positionLat.textContent = decimalToSexagesimal(positionCurrent.lat, "lat");
     //positionLng.textContent = decimalToSexagesimal(positionCurrent.lng, "lng");
-    //positionLatraw.textContent = position.coords.accuracy;
+    positionLatraw.textContent = position.coords.accuracy;
     //positionLngraw.textContent = position.coords.speed;
     positionLat.textContent = positionCurrent.lat;
     positionLng.textContent = positionCurrent.lng;
