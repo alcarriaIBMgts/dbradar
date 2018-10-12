@@ -17,7 +17,7 @@
   };
 
   let balls = [
-    {ball:1,lat:40.44361383246247,lon:-3.6665857235848986,dist:null,x:null,y:null,recogida:false,px:null,py:null},
+    {ball:1,lat:38.9981612661159,lon:-1.86286459700,dist:null,x:null,y:null,recogida:false,px:null,py:null},
     {ball:2,lat:null,lon:null,dist:null,x:null,y:null,recogida:true,px:null,py:null}
   ];
 
